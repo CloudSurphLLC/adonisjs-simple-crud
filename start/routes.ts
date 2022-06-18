@@ -18,8 +18,14 @@
 |
 */
 
-import Route from '@ioc:Adonis/Core/Route'
+import Route from "@ioc:Adonis/Core/Route";
 
-Route.get('/', async () => {
-  return { hello: 'world' }
-})
+Route.get("/", async () => {
+  return { hello: "world" };
+});
+
+Route.get("/post", "PostsController.showAll");
+Route.get("/post/:id", "PostsController.show");
+Route.post("/post", "PostsController.create");
+Route.put("/post/:id", "PostsController.update");
+Route.delete("/post/:id", "PostsController.delete");
