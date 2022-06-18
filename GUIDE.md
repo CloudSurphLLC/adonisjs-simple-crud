@@ -160,7 +160,7 @@ Open created controller and define the methods there
 public async showAll({ response }: HttpContextContract) {
     const posts = Post.all();
     
-    return response.json(posts);
+    return posts;
 }
 ```
 
@@ -244,7 +244,7 @@ export default class PostsController {
   // GET /post
   public async showAll({ response }: HttpContextContract) {
     const posts = Post.all();
-    return response.json(posts);
+    return posts;
   }
 
   // POST /post
