@@ -29,3 +29,5 @@ Route.get("/post/:id", "PostsController.show");
 Route.post("/post", "PostsController.create");
 Route.put("/post/:id", "PostsController.update");
 Route.delete("/post/:id", "PostsController.delete");
+
+Route.post("/register", "UsersController.register");
